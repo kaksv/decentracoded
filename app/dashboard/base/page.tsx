@@ -5,7 +5,7 @@ import { cookies } from 'next/headers';
 
 import { useWeb3Modal } from '@web3modal/wagmi/react';
 import toast from 'react-hot-toast';
-import { UserButton } from '@clerk/nextjs';
+// import { UserButton } from '@clerk/nextjs';
 import Link from 'next/link';
 
 export const revalidate = 0;
