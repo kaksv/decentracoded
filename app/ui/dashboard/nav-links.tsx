@@ -6,7 +6,7 @@ import {
   CalendarDaysIcon,
   DocumentDuplicateIcon,
   BriefcaseIcon,
-  ArrowLeftOnRectangleIcon
+  ArrowLeftOnRectangleIcon,
 } from '@heroicons/react/24/outline';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -16,13 +16,12 @@ import clsx from 'clsx';
 // Map of links to display in the side navigation.
 // Depending on the size of the application, this would be stored in a database.
 const links = [
-  
   {
     name: 'Bounties',
     href: '/dashboard/bounties',
     icon: BriefcaseIcon,
   },
-  { name: 'Events', href: '/dashboard/events', icon: CalendarDaysIcon },
+  // { name: 'Events', href: '/dashboard/events', icon: CalendarDaysIcon },
   { name: 'Back', href: '/', icon: ArrowLeftOnRectangleIcon },
 ];
 
@@ -37,9 +36,9 @@ export default function NavLinks() {
             key={link.name}
             href={link.href}
             className={clsx(
-              'sm:flex h-[64] sm:h-[48px] grow items-center justify-center gap-2 rounded-md bg-gray-50 shadow-xl p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3',
+              'h-[64] grow items-center justify-center gap-2 rounded-md bg-gray-50 p-3 text-sm font-medium shadow-xl hover:bg-sky-100 hover:text-blue-600 sm:flex sm:h-[48px] md:flex-none md:justify-start md:p-2 md:px-3',
               {
-                'bg-sky-100 shadow-sm text-blue-600 ' : pathname === link.href,
+                'bg-sky-100 text-blue-600 shadow-sm ': pathname === link.href,
               },
             )}
           >
